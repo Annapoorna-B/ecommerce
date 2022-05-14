@@ -1,0 +1,58 @@
+<ng-container *ngIf="getWishDetails.length !=0">
+    <div class="card-table">
+        <div class="card">
+            <div class="card-title" >
+               <h5>My WishList</h5> 
+                <button class="btn btn-light" (click)="emptywish()" style="right: 10px; position: absolute; margin-top: -33px; padding: 5px;">
+                    clrear WishList</button> 
+            </div>
+            
+            
+            <table class="table table-hover" style="position: absolute; top: 50px; left: 0px;">
+                <thead>
+                    <tr>
+                        <th><h6>SL.no</h6></th>
+                        <th><h6>Image</h6></th>
+                        <th><h6>Title</h6></th>
+                        <th><h6>MRP</h6></th>
+                        <th><h6>Delete</h6></th>
+                        <th><h6>Add to Cart</h6></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of getWishDetails; let i = index">
+                        <td style="width: 12%;">{{i+1}}</td>
+                        <td ><img src="{{item.coverFileName}}" alt=""> </td>
+                        <td style="width: 12%;">{{item.title}}</td>
+                        <td style="width: 12%;">$ {{item.price}}</td>
+                        <td ><button class="btn btn-danger" (click)="removewishItem(item)"><fa-icon [icon]="faTrash" style="font-size: 20px; padding: 5px;"></fa-icon></button>   
+                        </td>
+                        <td><button class="btn btn-primary" (click)="addtoCart(item)" >add to cart</button></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </ng-container>
+    
+    
+    
+    <ng-container *ngIf="getWishDetails.length ==0">
+        <div class="container">
+            <div class="card">
+                <h5 class="card-title" >
+                    My WishList
+                </h5>
+            </div>
+            <div class="center">
+                <h4>Your WishList is empty!!</h4>
+<!--                 
+                <button class="btn btn-primary" (click)="startShoping()">shop now</button> -->
+            </div>
+        </div>
+    </ng-container>
+
+
+
+    <!-- (click)="removeItem(item)" -->

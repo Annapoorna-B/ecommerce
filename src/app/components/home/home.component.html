@@ -1,0 +1,29 @@
+<div class="container" >
+    <div class="row" >
+        <ng-container *ngFor="let book of bookList">
+            <div class="card col-md-3" style="margin: 10px; padding: 10px;">
+                <button class="btn btn-danger" (click)="addWishList(book)" style="width: 40px; margin: 10px;">
+                    <fa-icon [icon]="faHeart" ></fa-icon>
+                    </button>
+                <img  mat-card-image src="{{book.coverFileName}}" alt="p1">
+                <div>title:{{book.title}}</div>
+                <div>$ {{book.price}}</div>
+<!-- 
+                <div style="display: flex; flex-direction: row;" > quantity:
+                    <button class="btn btn-light"  style=" margin: 10px;" (click)="inc(book)">
+                        <fa-icon [icon]="faPlus" ></fa-icon>
+                        </button>
+                        <div style=" margin: 10px;">{{book.quantity}}</div>
+                    
+                    <button class="btn btn-light"  style="margin: 10px;;" (click)="dec(book)">
+                        <fa-icon [icon]="faMinus" ></fa-icon>
+                        </button>
+                </div> -->
+               
+                <button class="btn btn-primary" (click)="addToCart(book)" >add to cart</button>
+                </div>
+        </ng-container>
+      
+    </div>
+</div>
+

@@ -1,0 +1,17 @@
+<header>
+    <div class="navbar bg-primary shadow-sm">
+        <fa-icon [icon]="faBook" class="faBook" style="font-size: 20px; padding: 5px;"></fa-icon>
+   <button class="btn btn-primary" style="font-size: 20px; padding: 5px; position: absolute; left: 50px;" (click)="openhome()">Book Cart
+   </button>
+   
+   <button class="btn btn-primary" (click)="openCart()" style="position: absolute; right: 0px;">
+    <fa-icon [icon]="faCartShopping" style="font-size: 20px; padding: 5px; "></fa-icon>
+    <div style="font-size: 10px;" class="badge bg-danger">{{cartItem}}</div>
+   </button>
+
+   <button class="btn btn-primary" routerLink="/wish" style="position: absolute; right: 70px;">
+    <fa-icon [icon]="faHeart" style="font-size: 20px; padding: 5px;"></fa-icon>
+    <div style="font-size: 10px;" class="badge bg-danger">{{wishTotalItem}}</div>
+   </button>
+    </div>
+</header>
