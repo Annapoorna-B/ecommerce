@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CartComponent,
     HeaderComponent,
-    WishListComponent
+    WishListComponent,
+    DetailComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

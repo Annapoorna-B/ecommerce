@@ -23,8 +23,8 @@
             <tbody>
                 <tr *ngFor="let item of getCartDetails; let i = index">
                     <td style="width: 12%;">{{i+1}}</td>
-                    <td ><img  alt="p1"> </td>
-                    <td style="width: 12%;">{{item.title}}</td>
+                    <td ><img  alt="p1" src="https://bookcart.azurewebsites.net/upload/{{item.coverFileName}}" style="width: 100px; height: 100px;"> </td>
+                    <td style="width: 12%;"><a  routerLink="/detail">{{item.title}}</a></td>
                     <td style="width: 12%;">$ {{item.price}}</td>
                     <td style="width: 20%;">
                         <button class="btn btn-primary" style="margin-right: 5px;"  (click)="incQnt(item.bookId, item.quantity)"><fa-icon [icon]="faPlus" style="font-size: 10px; padding: 5px;"></fa-icon></button>
@@ -40,7 +40,7 @@
                     <td colspan="4"></td>
                     <!-- <td ><button class="btn btn-primary" routerLink="/home">Shop more</button> </td> -->
                     <td style="width: 200px;"><strong>Grand total : $ {{grandTotal}}</strong></td>
-                    <td ><button class="btn btn-success">Check out</button> </td>
+                    <td ><button class="btn btn-success" routerLink="/checkout">Check out</button> </td>
                 </tr>
             </tbody>
         </table>
